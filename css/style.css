@@ -1,6 +1,7 @@
-*::after,*::before {
+*,*::after,*::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0px auto;
     padding: 0px 15px
 }
 
@@ -25,7 +26,6 @@ li {
 }
 
 .header {
-    height: 78px;
     margin-bottom: 40px;
 }
 
@@ -33,6 +33,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0px;
 }
 
 .header__list {
@@ -52,8 +53,8 @@ li {
 
 .header__btn {
     padding: 12px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 14px;
@@ -61,6 +62,7 @@ li {
     background-color: white;
     border-radius: 4px;
     color: #173A56;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 
@@ -74,23 +76,22 @@ li {
     border: 1px solid #FF9900;
     background-color: #FF9900;
     border-radius: 4px;
+    font-family: 'Poppins',sans-serif;
     color: white;
     cursor: pointer;
 }
 
 .home {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .home__inner {
-    max-width: 1000px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
-
-
 
 .home__block {
     max-width: 518px;
@@ -101,9 +102,9 @@ li {
 }
 
 .home__title {
-    max-width: 400px;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 44px;
+    font-weight: bolder;
+    line-height: 1.3;
     margin: 0;
 }
 
@@ -118,7 +119,10 @@ li {
 }
 
 .home__text {
-    max-width: 400px;
+    line-height: 1.8;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .home__btn {
@@ -153,7 +157,7 @@ li {
     background-image: url(../img/03\ Feature.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100vh;
+    padding-bottom: 150px;
 }
 
 .about__inner-title {
@@ -161,6 +165,11 @@ li {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.about__card-title {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .about__title {
@@ -210,6 +219,10 @@ li {
     margin-top: 60px;
 }
 
+.menu__bg, .menu-right__bg, .menu-left__bg {
+    width: 100%;
+}
+
 .menu__inner {
     display: flex;
     justify-content: space-between;
@@ -235,10 +248,17 @@ li {
 
 .menu__right-text {
     max-width: 400px;
+    line-height: 1.8;
 }
 
 .menu__card-inner-text {
     display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.menu__card-text {
+    margin-left: 15px;
 }
 
 .menu-left {
@@ -247,6 +267,11 @@ li {
 
 .menu-left__bg {
     margin-top: 40px;
+}
+
+.menu__card-title {
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .group {
@@ -301,7 +326,6 @@ li {
     background-color: white;
     border-radius: 25px;
     padding: 10px;
-    max-width: 200px;
 }
 
 .text-top {
@@ -319,7 +343,7 @@ li {
 .text-bottom {
     position: absolute;
     bottom: 10px;
-    right: 600px;
+    right: 500px;
     margin-bottom: 40px;
 }
 
@@ -357,6 +381,8 @@ li {
 .team__inner {
     display: flex;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .team__title {
@@ -365,16 +391,17 @@ li {
     font-weight: 900;
 }
 
-.team__text {
-    margin-bottom: 40px;
-}
-
 .team__card {
     max-width: 380px;
+    margin-top: 80px;
+}
+
+.team__card-title {
+    font-size: 16px;
 }
 
 .team__card-text {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -391,7 +418,7 @@ li {
 }
 
 .footer {
-    border-top: 2px solid gray;
+    border-top: 2px solid gainsboro;
     padding-top: 130px;
     padding-bottom: 50px;
 }
@@ -399,6 +426,7 @@ li {
 .footer__inner {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .footer__list {
@@ -408,16 +436,25 @@ li {
 
 .footer__list-item {
     color: black;
+    font-size: 16px;
+    margin-bottom: 6px;
 }
 
 #footer__inp {
     border: 1px solid #BCD0E5;
     color: #BCD0E5;
-    padding: 10px;
+    padding: 14px;
+    width: 100%;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
     padding-right: 60px;
-    display: block;
     margin-bottom: 15px;
 }
+
+#footer__inp::placeholder {
+    color: #aecdee;
+}
+
 
 .footer__btn {
     background-color: #FF9900;
@@ -426,10 +463,11 @@ li {
     border-radius: 2px;
     padding: 8px;
     padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
     padding-right: 20px;
 }
 
 .footer__logo {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
